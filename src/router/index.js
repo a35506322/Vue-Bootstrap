@@ -24,6 +24,21 @@ const routes = [
     path: '/bootstrap2',
     name: 'Bootstrap2',
     component: () => import('../views/Bootstrap2.vue')
+  },
+  {
+    path: '/listgroup',
+    name: 'ListGroup',
+    component: () => import('../views/ListGroup.vue')
+  },
+  {
+    path: '/blog',
+    name: 'Blog',
+    component: () => import('../views/Blog.vue')
+  },
+  {
+    path: '/position',
+    name: 'Position',
+    component: () => import('../views/Position.vue')
   }
 ]
 
