@@ -19,6 +19,11 @@ const routes = [
     path: '/bootstrap1',
     name: 'Bootstrap1',
     component: () => import('../views/Bootstrap1.vue')
+  },
+  {
+    path: '/bootstrap2',
+    name: 'Bootstrap2',
+    component: () => import('../views/Bootstrap2.vue')
   }
 ]
 
