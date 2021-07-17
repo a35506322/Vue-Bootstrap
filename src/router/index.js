@@ -39,12 +39,28 @@ const routes = [
     path: '/position',
     name: 'Position',
     component: () => import('../views/Position.vue')
+  },
+  {
+    path: '/modal',
+    name: 'Modal',
+    component: () => import('../views/Modal.vue')
+  },
+  {
+    path: '/navbar',
+    name: 'Navbar',
+    component: () => import('../views/Navbar.vue')
+  },
+  {
+    path: '/navbar2',
+    name: 'Navbar2',
+    component: () => import('../views/Navbar2.vue')
   }
 ]
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes
+  routes,
+  linkActiveClass: 'active'
 })
 
 export default router
