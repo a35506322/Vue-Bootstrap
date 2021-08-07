@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: '/vue-bootstrap/dist/'
+  publicPath: '/vue-bootstrap/dist/dist/'
 }
