@@ -54,6 +54,33 @@ const routes = [
     path: '/navbar2',
     name: 'Navbar2',
     component: () => import('../views/Navbar2.vue')
+  },
+  {
+    path: '/fundraising',
+    name: 'Fundraising',
+    component: () => import('../views/Fundraising.vue'),
+    children: [
+      {
+        path: 'project_introduction',
+        name: 'ProjectIntroduction',
+        component: () => import('@/components/ProjectIntroduction.vue')
+      },
+      {
+        path: 'frequently_asked_questions',
+        name: 'FrequentlyAskedQuestions',
+        component: () => import('@/components/FrequentlyAskedQuestions.vue')
+      },
+      {
+        path: 'current_progress',
+        name: 'CurrentProgress',
+        component: () => import('@/components/CurrentProgress.vue')
+      },
+      {
+        path: 'message',
+        name: 'Message',
+        component: () => import('@/components/Message.vue')
+      }
+    ]
   }
 ]
 

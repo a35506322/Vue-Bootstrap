@@ -1,0 +1,76 @@
+/*變數用法*/
+$max-width-100: 100%;
+$light-yellow:#ffdf65;
+
+/*minin 抽出常用程式碼*/
+@mixin img-fuild {
+  max-width:  $max-width-100 !important;
+  max-height: auto !important;
+}
+
+@mixin btn-pink {
+  background-color: #FF785E !important;
+  color: #FFFFFF !important;
+}
+
+@mixin btn-ligth-gray {
+  background-color: #858377 !important;
+  color: #FFFFFF !important;
+}
+
+img {
+  @include img-fuild;
+}
+
+a {
+  text-decoration: none;
+  /* & 連接動詞*/
+  &:hover {
+    color: #ffc107;
+  }
+}
+
+.letter-spacing-1 {
+  letter-spacing: 0.1em;
+}
+
+.btn-light-yellow{
+  &:hover {
+    @include btn-pink
+  }
+}
+
+.btn-outline-light-gray { 
+  &:hover {
+    @include btn-ligth-gray
+  }
+}
+
+.transition-transform-02{
+  transition: transform 0.2s ease-in-out; 
+}
+
+.box-shadow-none {
+  box-shadow: none !important
+}
+
+.rotate-180 {
+  transform: rotate(-0.5turn);
+}
+
+.questions-active {
+  border-bottom: 2px solid $light-yellow;
+}
+
+.questions-hover {
+  &:hover {
+    color: $light-yellow;
+  }
+}
+
+.fixed-fundraising {
+  cursor: pointer;
+  &:hover {
+    @include btn-pink
+  }
+}

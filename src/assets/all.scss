@@ -2,9 +2,11 @@
 @import "~bootstrap/scss/functions";
 
 // 2. Include any default variable overrides here
+@import "helper/variables";
 
 // 3. Include remainder of required Bootstrap stylesheets
-@import "./helper/variables";
 @import "~bootstrap/scss/mixins";
-
 @import "~bootstrap/scss/bootstrap";
+
+
+@import "scss/custom.scss"

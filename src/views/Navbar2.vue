@@ -2,10 +2,10 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-auto">
-        <ul class="nav nav-tabs bg-dark">
-          <li class="nav-item"   v-for="(item,index) in blogs" v-bind:key="'key'+index">
-            <a class="nav-link fw-bold link-secondary" v-bind:class="{'active':index===0}" data-bs-toggle="tab"
-              v-bind:data-bs-target="'#'+item.id" type="button" role="tab">{{item.id}}</a>
+        <ul class="nav nav-tabs bg-dark"  role="tablist">
+          <li class="nav-item"  v-for="(item,index) in blogs" v-bind:key="'key'+index">
+            <button class="nav-link fw-bold link-secondary" v-bind:class="{'active':index===0}" data-bs-toggle="tab"
+              v-bind:data-bs-target="'#'+item.id" type="button" role="tab">{{item.id}}</button>
           </li>
         </ul>
         <div class="tab-content">
@@ -42,6 +42,8 @@ export default {
     }
   },
   mounted () {
+    // 如果不使用JS事件去控制 就必須要在href="#+id"才行
+
     var triggerTabList = [].slice.call(document.querySelectorAll('.nav > .nav-tabs > button'))
     triggerTabList.forEach(function (triggerEl) {
       var tabTrigger = new Tab(triggerEl)
